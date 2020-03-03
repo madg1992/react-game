@@ -1,4 +1,4 @@
-![clicky-game-demo]("./public/clicky-game.png")
+![clicky-game-demo](./public/clicky-game.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
