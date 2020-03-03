@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "image": "./images/eevee.png",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "image": "./images/magmar.png",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "image": "./images/meowth.png",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "image": "./images/pickachu.png",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "image": "./images/ponyta.png",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "image": "./images/raichu.png",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "image": "./images/snorlax.png",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "image": "./images/voltorb.png",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "image": "./images/growlithe.png",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "image": "./images/charmander.png",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "image": "./images/slowpoke.png",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "image": "./images/dewgong.png",
+        "clicked": false
+    },
+    {
+        "id": 13,
+        "image": "./images/abra.png",
+        "clicked": false
+    },
+    {
+        "id": 14,
+        "image": "./images/scyther.png",
+        "clicked": false
+    },
+    {
+        "id": 15,
+        "image": "./images/chansey.png",
+        "clicked": false
+    }
+]

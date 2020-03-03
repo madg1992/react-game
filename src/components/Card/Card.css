@@ -1,0 +1,14 @@
+.card {
+  margin: 1rem;
+    border-radius: 2px;
+    width: 180px;
+    background: rgb(92, 92, 92);
+    position: relative;
+    height: 175px;
+  }
+  
+  .img-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+  }

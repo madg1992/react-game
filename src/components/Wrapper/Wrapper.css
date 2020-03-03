@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    padding: 20px;
+    margin-top:10px;
+    align-content: center;
+    margin-bottom: 20px; 
+    background: rgb(92, 92, 92);
+    height: 100%;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 50px; 
+  }

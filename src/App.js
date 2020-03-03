@@ -1,26 +1,67 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Header from "./components/Header";
+import Jumbotron from "./components/Jumbotron";
+import Card from "./components/Card";
+import Wrapper from "./components/Wrapper";
+import cards from "./cards.json";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cards: cards,
+      topScore: 0,
+      currentScore: 0,
+    };
+    this.checkIfClicked = this.checkIfClicked.bind(this);
+  }
+
+  checkIfClicked(id) {
+    let clickedCard = this.state.cards.filter(card => card.id === id)[0];
+    let cardsCopy = this.state.cards.slice().sort(function (a, b) { return 0.5 - Math.random() });
+    if (!clickedCard.clicked) {
+      clickedCard.clicked = true;
+      cardsCopy[cardsCopy.findIndex((card) => card.id === id)] = clickedCard;
+
+      this.setState({
+        cards: cardsCopy,
+        currentScore: this.state.currentScore + 1,
+        topScore: (this.state.currentScore + 1 > this.state.topScore ? this.state.currentScore + 1 : this.state.topScore),
+      });
+    }
+    else {
+
+      let resetCardsCopy = cardsCopy.map((card) => {
+        return {
+          id: card.id,
+          image: card.image,
+          clicked: false,
+        }
+      });
+      this.setState({
+        cards: resetCardsCopy,
+        currentScore: 0,
+      });
+    }
+  }
+  render() {
+    return (
+      <div className="container">
+        <Jumbotron />
+        <Header currentScore={this.state.currentScore} topScore={this.state.topScore} />
+        <Wrapper>
+          {this.state.cards.map(card => (
+            <Card
+              checkIfClicked={this.checkIfClicked}
+              id={card.id}
+              key={card.id}
+              image={card.image}
+            />
+          ))}
+        </Wrapper>
+      </div>
+    );
+  }
 }
 
 export default App;
